@@ -21,7 +21,9 @@ app.use("/api/reports", require("./routes/reports"));
 app.use("/api", policiesRoutes);
 
 app.use("/api/sops", sopsRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Bank MIS Backend Running ✅");
+});
 app.listen(PORT, () => {
   console.log("Server running");
 });
