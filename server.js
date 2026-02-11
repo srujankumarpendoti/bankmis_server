@@ -3,7 +3,7 @@ const cors = require("cors");
 const policiesRoutes = require("./routes/policies");
 const sopsRoutes = require("./routes/sops");
 
-
+const PORT = process.env.PORT || 8080;
 const authRoutes = require("./routes/auth");
 const dashboardRoutes = require("./routes/dashboard");
 
@@ -22,7 +22,7 @@ app.use("/api", policiesRoutes);
 
 app.use("/api/sops", sopsRoutes);
 
-
-app.listen(5000, () => {
-  console.log("✅ Backend running at http://localhost:5000");
+app.listen(PORT, () => {
+  console.log("Server running");
 });
+
